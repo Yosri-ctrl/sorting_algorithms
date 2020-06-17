@@ -2,23 +2,29 @@
 /**
 *bubble_sort - bubble sort
 *@a: the array to treat
-*@s: the size of the array
+*@size: size of the array
 **/
-void bubble_sort(int *a, size_t s)
+void bubble_sort(int *a, size_t size)
 {
-	size_t i, j, aux;
-
-	for (i = 0; i < s - 1; i++)
-	{
-		for (j = 0; j < s - 1; j++)
+	int i = 1, aux;
+	size_t j;
+if (!a)
+	return;
+while (i)
+{
+	i = 0;
+		for (j = 0; j < size - 1; j++)
 		{
 			if (a[j] > a[j + 1])
 			{
+
 				aux = a[j];
 				a[j] = a[j + 1];
 				a[j + 1] = aux;
-				print_array(a, s);
+				i = 1;
+				print_array(a, size);
 			}
+
 		}
 	}
 }
